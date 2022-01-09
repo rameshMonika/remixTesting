@@ -57,3 +57,16 @@ rm -rf app
 # copy your app over
 cp -R ../my-old-remix-app/app app
 ```
+
+
+----------------prisma =>schema.prisma -----------
+
+
+model ToDo {
+  todo_id     Int    @id @default(autoincrement())
+  description String @db.VarChar
+  @@map("todo")
+}
+
+the model ToDo is the new naming convention
+the @@map("todo") is the old one
