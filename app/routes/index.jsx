@@ -2,8 +2,6 @@ import { useLoaderData } from "remix";
 import { db } from "~/utils/db.server";
 
 export async function loader(){
-
-
   const data = {
     toDos: await db.todo.findUnique({
       where: {
